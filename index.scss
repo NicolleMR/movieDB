@@ -1,0 +1,119 @@
+$bg-color:#1D1D1D;
+$aqua:#0FEFFD;
+$font_size: 20;
+@function pxTorem($pixels) {
+    @return ($pixels / $font_size) + rem;
+}
+@font-face {
+    font-family: Roboto;
+    src: url("./fonts/Roboto-Black.ttf") format("truetype");
+    font-weight: 900;
+    font-style: normal;
+}
+@font-face {
+    font-family: Roboto;
+    src: url("./fonts/Roboto-BlackItalic.ttf") format("truetype");
+    font-weight: 900;
+    font-style: italic;
+}
+@font-face {
+    font-family: Roboto;
+    src: url("./fonts/Roboto-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: Roboto;
+    src: url("./fonts/Roboto-BoldItalic.ttf") format("truetype");
+    font-weight: 700;
+    font-style: italic;
+}
+@font-face {
+    font-family: Roboto;
+    src: url("./fonts/Roboto-Italic.ttf") format("truetype");
+    font-weight: 400;
+    font-style: italic;
+}
+@font-face {
+    font-family: Roboto;
+    src: url("./fonts/Roboto-Light.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: Roboto;
+    src: url("./fonts/Roboto-LightItalic.ttf") format("truetype");
+    font-weight: 300;
+    font-style: italic;
+}
+@font-face {
+    font-family: Roboto;
+    src: url("./fonts/Roboto-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: Roboto;
+    src: url("./fonts/Roboto-MediumItalic.ttf") format("truetype");
+    font-weight: 500;
+    font-style: italic;
+}
+@font-face {
+    font-family: Roboto;
+    src: url("./fonts/Roboto-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: Roboto;
+    src: url("./fonts/Roboto-Thin.ttf") format("truetype");
+    font-weight: 100;
+    font-style: normal;
+}
+@font-face {
+    font-family: Roboto;
+    src: url("./fonts/Roboto-ThinItalic.ttf") format("truetype");
+    font-weight: 100;
+    font-style: italic;
+}
+html {
+    box-sizing: border-box;
+    font-size: $font_size + px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: $bg-color;
+    margin: 0;
+    font-family: Roboto;
+    height: 100vh;
+}
+
+.header {
+    position: absolute;
+    z-index: 2;
+    right: pxTorem(61);
+    top: pxTorem(24);
+
+    &__icon {
+        
+        &:not(:last-child) {
+            margin-right: pxTorem(51);
+        }
+    }
+}
+
+.main {
+    position: relative;
+}
+
+
+
+@import "./styles/_hero.scss";
+@import "./styles/_releases.scss";
+@import "./styles/_featured.scss";

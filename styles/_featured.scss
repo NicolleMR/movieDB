@@ -1,0 +1,105 @@
+.featured {
+    
+    &__subtitle {
+        margin: 0;
+        color: white;
+        font-size: 18px;
+        padding: 25px 70px;
+        position: relative;
+
+        img {
+            margin-left: 16px;
+        }
+    }
+
+    &__container {
+        display: flex;
+        justify-content: center;
+        position: relative;
+    }
+
+    &__card {
+        background-image: url(./assets/target1.png);
+        width: 418px;
+        height: 736px;
+        //z-index: 998;
+        background-size: contain;
+        background-repeat: no-repeat;
+
+        
+        &:before {
+            content:'';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0,0,0,0.1);
+        }
+    }
+
+    &__card--2 {
+        background-image: url(./assets/target2.png);
+    }
+
+    &__card--3 {
+        background-image: url(./assets/target3.png);
+    }
+
+    &__container-info {
+        position: relative;
+        left: 35px;
+        top: 435px;
+        transition: all .5s ease;
+        z-index: 999;
+    }
+
+    &__label {
+        position: absolute;
+        bottom: -28px;
+        left: 3px;
+        color: white;
+        font-weight: 300;
+        font-size: 18px;
+        img {
+            margin-left: 25px;
+            vertical-align: middle;
+        }
+    }
+
+    &__category {
+        color: $aqua;
+        background-color: rgba(0,0,0,0.6);
+        padding: 4px 8px;
+        border-bottom-left-radius: 10px;
+        border-top-right-radius: 10px;
+        font-size: 14px;
+    }
+
+    &__stars {
+        margin: 17px 0;
+    }
+    &__movie-name {
+        color: white;
+        font-size: 32px;
+        margin: 16px 0;
+        width: 244px;
+    }
+
+    &__vector-next {
+        position: absolute;
+        right: 17px;
+        top: 328px;
+        z-index: 999;
+        &:hover {
+            background-color: rgba(0,0,0,0.5);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.5s ease;
+        }
+    }
+}
