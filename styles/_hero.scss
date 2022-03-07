@@ -1,10 +1,15 @@
 
 .hero {
     background-image: url(./assets/hero.png);
-	background-size: cover;
 	background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
     height: 100vh;
 
+    &__container-hero {
+        background-attachment: fixed;
+    }
+    
     &:before {
         content:'';
         position: absolute;
@@ -68,9 +73,17 @@
         justify-content: space-between;
         position: relative;
         z-index: 3;
-        top: -213px;
+        transform: translateY(-50%);
+        top: -30%;
         padding: 0 72px;
         margin: 16px 0;
+    }
+
+    &__arrow {
+        background-color: transparent;
+        border: transparent;
+        outline: none;
+        cursor: pointer;
     }
 
     &__base {

@@ -119,9 +119,14 @@ body {
 
 .hero {
   background-image: url(./assets/hero.png);
-  background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
   height: 100vh;
+}
+
+.hero__container-hero {
+  background-attachment: fixed;
 }
 
 .hero:before {
@@ -192,9 +197,18 @@ body {
           justify-content: space-between;
   position: relative;
   z-index: 3;
-  top: -213px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  top: -30%;
   padding: 0 72px;
   margin: 16px 0;
+}
+
+.hero__arrow {
+  background-color: transparent;
+  border: transparent;
+  outline: none;
+  cursor: pointer;
 }
 
 .hero__base {
