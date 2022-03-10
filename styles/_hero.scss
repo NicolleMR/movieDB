@@ -1,14 +1,14 @@
 
 .hero {
+    position: relative;
+    padding: 154px;
     background-image: url(./assets/hero.png);
-	background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-repeat: no-repeat;
     background-size: cover;
+    background-position-x: center;
     height: 100vh;
-
-    &__container-hero {
-        background-attachment: fixed;
-    }
+    //opacity: 0;
+    //visibility: hidden;
 
     &:before {
         content:'';
@@ -20,9 +20,14 @@
         background-color: rgba(0,0,0,0.3);
     }
 
+    .active {
+        opacity: 1;
+        visibility: visible;
+    }
+
     &__feature {
         position: relative;
-        padding: pxTorem(154) 0 0 pxTorem(184);
+        z-index: 5;
     }
 
     &__category {
@@ -71,11 +76,12 @@
 
     &__container-arrows {
         cursor: pointer;
-        position: relative;
-        z-index: 3;
-        transform: translateY(-50%);
+        z-index: 6;
         padding: 0 72px;
-        top: -30%;
+        position: absolute;
+        top: 275px;
+        left: 0;
+        right: 0;
         display: flex;
         justify-content: space-between;
         
@@ -94,8 +100,7 @@
         &:hover {
             background-color: rgba(0,0,0,0.5);
             transition: all 0.5s ease;
-            
-            
+            cursor: pointer;
         }
     }
 
@@ -115,5 +120,6 @@
         justify-items: center;
         grid-row-gap: 55px;
     }
+
 }
 
